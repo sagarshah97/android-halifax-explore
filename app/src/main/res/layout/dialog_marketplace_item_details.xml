@@ -1,0 +1,74 @@
+<!-- dialog_marketplace_item_details.xml -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/dialogItemImageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_item_image"/>
+
+        <TextView
+            android:id="@+id/dialogItemNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/dialogItemImageView"/>
+
+        <TextView
+            android:id="@+id/dialogItemDescriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/dialogItemNameTextView"/>
+
+        <TextView
+            android:id="@+id/dialogItemPriceTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@android:color/holo_green_dark"
+            android:text="$"
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/dialogItemDescriptionTextView"/>
+
+        <TextView
+            android:id="@+id/dialogSellerLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Posted by: "
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/dialogItemPriceTextView"/>
+
+        <TextView
+            android:id="@+id/dialogSellerEmailTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/dialogSellerLabelTextView"
+            android:layout_below="@id/dialogItemPriceTextView"/>
+
+        <Button
+            android:id="@+id/contactSellerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Seller"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/dialogSellerEmailTextView"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+</ScrollView>
