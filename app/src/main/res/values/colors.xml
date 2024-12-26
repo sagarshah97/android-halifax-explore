@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Define your primary color -->
+    <color name="colorPrimary">#FF6200EE</color> <!-- Example color -->
+    <!-- ... other color definitions ... -->
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#BB86FC</color>
+    <color name="whiteText">#FFFFFF</color>
+    <color name="greyText">#BDBDBD</color>
+    <color name="lightBlack">#232323</color>
+    <color name="divider">#1F1F1F</color>
+    <color name="itemBackground">#121212</color>
+    <color name="numberHeaderColor">#D81B60</color> <!-- Example bright accent color -->
+    <color name="titleTextColor">#000000</color>
+</resources>

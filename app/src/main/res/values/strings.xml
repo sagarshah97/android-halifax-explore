@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="title_activity_item_details">ItemDetailsActivity</string>
+    <string name="title_activity_full_details">FullDetailsActivity</string>
+    <string name="API_KEY">AIzaSyCG9u9R_MruQgfihvWn6X6QLivGnuZseJQ</string>
+    <string name="MapQuestKey">h1PEnzyxUSIhPrt76C5tlVZNyWBBgBtJ</string>
+    <string name="location_permission_denied">Location Permission were denied! Please go to app settings and enable permissions</string>
+    <string name="permission_required_toast">We need to access your location!</string>
+    <string name="permission_rationale_location">Would you like to enable location info?</string>
+    <string name="business_name_placeholder">Business Name</string>
+    <string name="opening_hours_placeholder">Opening Hours: 9:00 AM - 6:00 PM</string>
+    <string name="closing_hours_placeholder">Closing Hours: 6:00 PM</string>
+    <string name="business_address_placeholder">123 Main Street, Cityville</string>
+    <string name="business_image_description">Business Image</string>
+    <string name="report_incident">Report Incident</string>
+</resources>
