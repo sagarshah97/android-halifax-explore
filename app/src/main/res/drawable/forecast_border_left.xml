@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Left border -->
+    <item android:width="2dp"> <!-- Specify the width of the border -->
+        <shape android:shape="rectangle">
+            <solid android:color="#20000000" /> <!-- Your border color -->
+        </shape>
+    </item>
+    <!-- Remaining part of the drawable is transparent -->
+    <item android:left="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+</layer-list>
