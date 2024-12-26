@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "674458173756",
+    "project_id": "mobile-computing-35956",
+    "storage_bucket": "mobile-computing-35956.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674458173756:android:77476d840df778bc2e9e39",
+        "android_client_info": {
+          "package_name": "com.mobile_computing.halifaxexplore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "674458173756-hv50c2pq7cmo234egsu4tckq7o2s9nbv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGlSw4x3EG4NULRgrZTj_zYjzfuY-F-R0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "674458173756-hv50c2pq7cmo234egsu4tckq7o2s9nbv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
