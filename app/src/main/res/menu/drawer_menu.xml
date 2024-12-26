@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/home"
+        android:title="Home" />
+    <item
+        android:id="@+id/alerts"
+        android:title="Alerts" />
+    <item
+        android:id="@+id/blogs"
+        android:title="Blogs" />
+    <item
+        android:id="@+id/businesses"
+        android:title="Businesses" />
+    <item
+        android:id="@+id/events"
+        android:title="Events" />
+    <item
+        android:id="@+id/forums"
+        android:title="User Forums" />
+    <item
+        android:id="@+id/marketplace"
+        android:title="Buy and Sell" />
+    <item
+        android:id="@+id/newsfeed"
+        android:title="Latest News" />
+    <item
+        android:id="@+id/transport"
+        android:title="Public Transport Info" />
+    <item
+        android:id="@+id/services"
+        android:title="Find a Service / Handyman" />
+    <item
+        android:id="@+id/traffic"
+        android:title="Traffic Updates" />
+    <item
+        android:id="@+id/weather"
+        android:title="Weather" />
+    <item
+        android:id="@+id/profile"
+        android:title="Profile" />
+    <item
+        android:id="@+id/logout"
+        android:title="Log out" />
+</menu>
