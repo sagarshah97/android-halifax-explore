@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Halifax Explore"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+        tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/API_KEY" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Welcome!"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+<!--        <activity-->
+<!--            android:name=".MainActivity"-->
+<!--            android:exported="true"-->
+<!--            android:label="Halifax Explore"-->
+<!--            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>-->
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.alerts.AlertsActivity"
+            android:exported="true"
+            android:label="Alerts"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.blogs.BlogsActivity"
+            android:exported="true"
+            android:label="Blogs"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.business_directory.BusinessDirectoryActivity"
+            android:exported="true"
+            android:label="Businesses"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.forums.AnswersActivity"
+            android:exported="true"
+            android:label="Answers"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.event_calendar.EventCalendarActivity"
+            android:exported="true"
+            android:label="Events"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.forums.ForumsActivity"
+            android:exported="true"
+            android:label="User Forums"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.marketplace.MarketplaceActivity"
+            android:exported="true"
+            android:label="Buy and Sell"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.newsfeed.NewsFeedActivity"
+            android:exported="true"
+            android:label="News Feed"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.public_transport.PublicTransportActivity"
+            android:exported="true"
+            android:label="Public Transport Info"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.service_finder.ServiceFinderActivity"
+            android:exported="true"
+            android:label="Service Finder"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.traffic_updates.TrafficUpdatesActivity"
+            android:exported="true"
+            android:label="Traffic Updates"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.user_management.UserManagementActivity"
+            android:exported="true"
+            android:label="User Profile"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.weather.WeatherActivity"
+            android:exported="true"
+            android:label="Weather"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.blogs.BlogDetailActivity"
+            android:exported="true"
+            android:label="Blog Detail"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+        <activity android:name=".newsfeed.NewsDetailActivity" />
+        <activity android:name=".event_calendar.EventDetailActivity"/>
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.business_directory.BusinessDetailActivity"
+            android:exported="true"
+            android:label="Business Detail"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        </activity>
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.marketplace.PostItemActivity"
+            android:exported="true"
+            android:label="Post an Item"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity android:name=".event_calendar.SavedEventsActivity" />
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.public_transport.BusActivity"
+            android:exported="true"
+            android:label="Buses"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.public_transport.FerryActivity"
+            android:exported="true"
+            android:label="Ferry"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.public_transport.IncidentListActivity"
+            android:exported="true"
+            android:label="Ferry"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+        <activity
+            android:name="com.mobile_computing.halifaxexplore.public_transport.ReportIncidentActivity"
+            android:exported="true"
+            android:label="Ferry"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+    </application>
+</manifest>
