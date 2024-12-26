@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".marketplace.MarketplaceActivity">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+
+        <Button
+            android:id="@+id/postItemButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Post an Item"
+            android:background="#589fd6"
+            android:textColor="@android:color/white"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:padding="16dp"
+            android:radius="12dp"
+        android:elevation="4dp"/>
+
+        <!-- View for visual separation -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#000000"
+            android:layout_below="@id/postItemButton"
+            android:layout_marginTop="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMarketplace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/postItemButton"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"/>
+
+    </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_menu"/>
+</androidx.drawerlayout.widget.DrawerLayout>

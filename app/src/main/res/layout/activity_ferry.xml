@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:background="#fff">
+
+    <!-- ImageView for the ferry image -->
+    <ImageView
+        android:id="@+id/ferryImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ferry"
+        android:contentDescription="ferry"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Card for Halifax - Alderney route -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardHalifaxAlderney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="16dp"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            >
+
+            <LinearLayout
+                android:id="@+id/halifaxAlderneyHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000000"
+                    android:text="Halifax - Alderney Ferry"
+                    android:textSize="18sp"/>
+
+                <ImageView
+                    android:id="@+id/chevronAlderney"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/chevron_down"
+                    android:contentDescription="chevron"/>
+
+            </LinearLayout>
+
+            <!-- Details container for Halifax - Alderney -->
+            <LinearLayout
+                android:id="@+id/halifaxAlderneyDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/sunrise_color"
+                        android:contentDescription="first_ferry" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="First Ferry: 6:30 AM"
+                        android:textColor="#000000"
+                        android:paddingLeft="8dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/sunset"
+                        android:contentDescription="last_ferry" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Ferry: 11:30 PM"
+                        android:textColor="#000000"
+                        android:paddingLeft="8dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/money"
+                        android:contentDescription="last_ferry" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price: $2.50"
+                        android:textColor="#000000"
+                        android:paddingLeft="8dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/freq"
+                        android:contentDescription="freq" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Frequency: Every 15 minutes"
+                        android:textColor="#000000"
+                        android:paddingLeft="8dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/loc1"
+                        android:contentDescription="stop1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Bus connection at Halifax Ferry Terminal: Routes 2, 29 and 90"
+                        android:paddingLeft="8dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/end_loc"
+                        android:contentDescription="stop1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Bus connections at Alderney Ferry Terminal: Routes 5, 6A/B/C, 53, 54, 55, 62, 158, 159, 161, 165, 168A and 168B"
+                        android:paddingLeft="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Card for Halifax - Woodside route -->
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardHalifaxWoodside"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="16dp"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:id="@+id/halifaxWoodsideHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000000"
+                    android:text="Halifax - Woodside Ferry"
+                    android:textSize="18sp"/>
+
+                <ImageView
+                    android:id="@+id/chevronWoodside"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/chevron_down"
+                    android:contentDescription="chevron"/>
+
+            </LinearLayout>
+
+            <!-- Details container for Halifax - Woodside -->
+            <LinearLayout
+                android:id="@+id/halifaxWoodsideDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/sunrise_color"
+                        android:contentDescription="first_ferry" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="First Ferry: 6:37 AM"
+                        android:textColor="#000000"
+                        android:paddingLeft="8dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/sunset"
+                        android:contentDescription="last_ferry" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Ferry: 8:37 PM"
+                        android:textColor="#000000"
+                        android:paddingLeft="8dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/money"
+                        android:contentDescription="last_ferry" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price: $2.50"
+                        android:textColor="#000000"
+                        android:paddingLeft="8dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/freq"
+                        android:contentDescription="freq" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Frequency: Every 30 minutes"
+                        android:textColor="#000000"
+                        android:paddingLeft="8dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/loc1"
+                        android:contentDescription="stop1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Bus connection at Halifax Ferry Terminal: Routes 2, 29 and 90"
+                        android:paddingLeft="8dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/end_loc"
+                        android:contentDescription="stop1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Bus connections at Woodside Ferry Terminal: Route 6 A/B/C, 67, 178 and 179"
+                        android:paddingLeft="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+
+</ScrollView>
+

@@ -1,0 +1,175 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="350dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+
+        <!-- Business Image -->
+        <ImageView
+            android:id="@+id/businessImageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            android:contentDescription="@string/business_image_description" />
+
+        <TextView
+            android:id="@+id/businessNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Business Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/businessImageView"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/businessDescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Business Description"
+            android:textSize="16sp"
+            android:layout_below="@id/businessNameTextView"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <RelativeLayout
+            android:id="@+id/businessAddressLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/businessDescriptionTextView"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:onClick="openMaps">
+
+            <ImageView
+                android:id="@+id/addressIcon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/map" />
+
+            <TextView
+                android:id="@+id/businessAddressTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123 Main Street, Cityville"
+                android:textSize="16sp"
+                android:textColor="#0099CC"
+                android:layout_toEndOf="@id/addressIcon"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/businessEmailLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/businessAddressLayout"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:onClick="sendEmail">
+
+            <ImageView
+                android:id="@+id/emailIcon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/email" />
+
+            <TextView
+                android:id="@+id/businessEmailTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="john@doe.com"
+                android:textSize="16sp"
+                android:textColor="#0099CC"
+                android:layout_toEndOf="@id/emailIcon"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/businessPhoneLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/businessEmailLayout"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:onClick="dialPhoneNumber">
+
+            <ImageView
+                android:id="@+id/phoneIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/phone" />
+
+            <TextView
+                android:id="@+id/businessPhoneTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9876543210"
+                android:textSize="16sp"
+                android:textColor="#0099CC"
+                android:layout_toEndOf="@id/phoneIcon"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/reviewSectionHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Ratings and Reviews"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_below="@id/businessPhoneLayout"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/reviewsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/reviewSectionHeader"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/addReviewButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Review"
+            android:textColor="#FFF"
+            android:layout_below="@id/reviewsContainer"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#0099CC"/>
+    </RelativeLayout>
+
+</ScrollView>

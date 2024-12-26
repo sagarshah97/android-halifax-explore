@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Event Title -->
+    <TextView
+        android:id="@+id/eventTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"/>
+
+    <!-- Description Heading -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"/>
+
+    <!-- Event Description -->
+    <TextView
+        android:id="@+id/eventDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:paddingBottom="16dp"/>
+
+    <!-- Category Heading -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"/>
+
+    <!-- Event Category -->
+    <TextView
+        android:id="@+id/eventCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:paddingBottom="16dp"/>
+
+    <!-- Venue Heading -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Venue"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"/>
+
+    <!-- Event Venue -->
+    <TextView
+        android:id="@+id/eventVenue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:paddingBottom="16dp"/>
+
+    <!-- Additional UI elements as needed -->
+    <Button
+        android:id="@+id/saveEventButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Event"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="center"/>
+
+    <!-- View Saved Events Button -->
+    <Button
+        android:id="@+id/viewSavedEventsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Saved Events"
+        android:layout_gravity="center"/>
+</LinearLayout>

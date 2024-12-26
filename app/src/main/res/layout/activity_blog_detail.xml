@@ -1,0 +1,97 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageViewProductDetail"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/textViewBlogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewProductDetail"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="Product Title" />
+
+        <TextView
+            android:id="@+id/textViewBlogDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewBlogTitle"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            android:textSize="18sp"
+            android:text="Blog Description" />
+
+        <TextView
+            android:id="@+id/textViewBlogUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewBlogDetails"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            android:textSize="18sp"
+            android:text="Read More"
+            android:textColor="#0099CC"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:onClick="openUrl"/>
+
+        <TextView
+            android:id="@+id/textViewBlogCreator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewBlogUrl"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:text="Blog Creator" />
+
+        <TextView
+            android:id="@+id/textViewBlogPublished"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewBlogCreator"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:text="Blog Published On" />
+
+        <TextView
+            android:id="@+id/textViewBlogSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewBlogPublished"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:padding="8dp"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:text="Blog Source" />
+
+    </RelativeLayout>
+</ScrollView>

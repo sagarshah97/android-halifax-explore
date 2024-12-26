@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#E0E0E0"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/weather_card_background"
+        android:padding="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:elevation="4dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="48sp"
+                android:textColor="#212121" />
+
+            <TextView
+                android:id="@+id/tvWeatherCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#757575" />
+
+            <TextView
+                android:id="@+id/tvFeelsLikeTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#757575"
+                android:text="Feels like --°C"/>
+
+            <TextView
+                android:id="@+id/tvDayNight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#212121"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivWeatherIcon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@mipmap/ic_launcher" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/weather_card_background"
+        android:elevation="4dp"
+        android:padding="16dp">
+
+        <!-- Title for the Card -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:text="Today's Details"
+            android:paddingBottom="16dp"/>
+
+        <!-- Container for Each Detail Row -->
+        <!-- Repeat this structure for each detail item -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Icon and Label Container -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Icon for the Detail -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/wind"
+                android:contentDescription="weather_detail_icon" />
+
+                <!-- Label for the Detail -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Wind"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Value for the Detail -->
+            <TextView
+                android:id="@+id/tvWind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:text="-- KM/H"
+                android:layout_marginEnd="16dp" />
+
+        </LinearLayout>
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B6B6B6"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Repeat this structure for each detail item -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Icon and Label Container -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Icon for the Detail -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/visibility"
+                    android:contentDescription="weather_detail_icon" />
+
+                <!-- Label for the Detail -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Visibility"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Value for the Detail -->
+            <TextView
+                android:id="@+id/tvVisibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:text="-- KM"
+                android:layout_marginEnd="16dp" />
+
+        </LinearLayout>
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B6B6B6"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Repeat this structure for each detail item -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Icon and Label Container -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Icon for the Detail -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/precipitation"
+                    android:contentDescription="weather_detail_icon" />
+
+                <!-- Label for the Detail -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Precipitation"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Value for the Detail -->
+            <TextView
+                android:id="@+id/tvPrecipitation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:text="-- KM/H"
+                android:layout_marginEnd="16dp" />
+
+        </LinearLayout>
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B6B6B6"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Repeat the above structure for each row of details -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Icon and Label Container -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Icon for the Detail -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/humidity"
+                    android:contentDescription="weather_detail_icon" />
+
+                <!-- Label for the Detail -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Humidity"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Value for the Detail -->
+            <TextView
+                android:id="@+id/tvHumidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:text="-- %"
+                android:layout_marginEnd="16dp" />
+
+        </LinearLayout>
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B6B6B6"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Icon and Label Container -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Icon for the Detail -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/dew"
+                    android:contentDescription="weather_detail_icon" />
+
+                <!-- Label for the Detail -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Dew Point"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Value for the Detail -->
+            <TextView
+                android:id="@+id/tvDewPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:text="-- °"
+                android:layout_marginEnd="16dp" />
+
+        </LinearLayout>
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B6B6B6"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Icon and Label Container -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Icon for the Detail -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/pressure"
+                    android:contentDescription="weather_detail_icon" />
+
+                <!-- Label for the Detail -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Pressure"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Value for the Detail -->
+            <TextView
+                android:id="@+id/tvPressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:text="-- mb"
+                android:layout_marginEnd="16dp" />
+
+        </LinearLayout>
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B6B6B6"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Icon and Label Container -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Icon for the Detail -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/uv"
+                    android:contentDescription="weather_detail_icon" />
+
+                <!-- Label for the Detail -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="UV Index"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Value for the Detail -->
+            <TextView
+                android:id="@+id/tvUVIndex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:text="LOW"
+                android:layout_marginEnd="16dp" />
+
+        </LinearLayout>
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B6B6B6"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Repeat the above structure for each row of details -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Icon and Label Container -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Icon for the Detail -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/sunrise"
+                    android:contentDescription="weather_detail_icon" />
+
+                <!-- Label for the Detail -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Sunrise"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Value for the Detail -->
+            <TextView
+                android:id="@+id/tvSunrise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:text="--"
+                android:layout_marginEnd="16dp" />
+
+        </LinearLayout>
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B6B6B6"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Icon and Label Container -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Icon for the Detail -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/sunset"
+                    android:contentDescription="weather_detail_icon" />
+
+                <!-- Label for the Detail -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Sunset"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Value for the Detail -->
+            <TextView
+                android:id="@+id/tvSunset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:text="--"
+                android:layout_marginEnd="16dp" />
+
+        </LinearLayout>
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B6B6B6"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:textSize="18sp"
+                android:text="Daily Forecast" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDailyForecast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:scrollbars="horizontal" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
+</ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

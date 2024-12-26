@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <FrameLayout
+        android:id="@+id/busCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/busImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bus"
+            android:scaleType="centerInside"
+            android:contentDescription="bus"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="Bus"
+            android:textSize="24sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:background="#8A8A8A"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/ferryCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ferryImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ferry"
+            android:scaleType="centerInside"
+            android:contentDescription="ferry"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="Ferry"
+            android:textSize="24sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:background="#8A8A8A"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/incidentCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/IncidentImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/report"
+            android:scaleType="centerInside"
+            android:contentDescription="incident"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="Report Incident"
+            android:textSize="24sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:background="#8A8A8A"/>
+    </FrameLayout>
+</LinearLayout>

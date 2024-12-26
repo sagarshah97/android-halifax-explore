@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mobile_computing.halifaxexplore.blogs.BlogsActivity">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".BlogsActivity">
+
+            <TextView
+                android:id="@+id/blogsPageHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="Explore blogs by categories"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerCategories"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/blogsPageHeader"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:popupBackground="#323232"
+                android:background="#323232"
+                />
+
+            <ImageView
+                android:id="@+id/dropdownIcon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/dropdown_icon"
+                android:layout_alignTop="@id/spinnerCategories"
+                android:layout_alignEnd="@id/spinnerCategories"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Dropdown Arrow"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewProducts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/spinnerCategories"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:clipToPadding="false"
+                android:layout_above="@+id/buttonRefresh" />
+
+            <Button
+                android:id="@+id/buttonRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#0099CC"
+                android:textColor="#FFF"
+                android:text="Refresh"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_menu"/>
+</androidx.drawerlayout.widget.DrawerLayout>
+
+

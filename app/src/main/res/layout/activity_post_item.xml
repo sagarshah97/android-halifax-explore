@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".marketplace.PostItemActivity"
+    android:id="@+id/postItemLayout"
+    android:background="#F5F5F5">
+
+    <EditText
+        android:id="@+id/yourItemNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item Name *"
+        android:inputType="textPersonName"
+        android:backgroundTint="#2196F3" />
+
+    <EditText
+        android:id="@+id/yourItemDescriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yourItemNameEditText"
+        android:layout_marginTop="16dp"
+        android:hint="Item Description *"
+        android:inputType="textMultiLine|textPersonName"
+        android:backgroundTint="#2196F3" />
+
+    <EditText
+        android:id="@+id/yourItemPriceEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yourItemDescriptionEditText"
+        android:layout_marginTop="16dp"
+        android:hint="Item Price *"
+        android:inputType="numberDecimal"
+        android:backgroundTint="#2196F3" />
+
+    <EditText
+        android:id="@+id/yourItemImageURLEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yourItemPriceEditText"
+        android:layout_marginTop="16dp"
+        android:hint="Image URL"
+        android:inputType="text"
+        android:backgroundTint="#2196F3" />
+
+    <Button
+        android:id="@+id/postButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post Item"
+        android:layout_below="@id/yourItemImageURLEditText"
+        android:layout_marginTop="16dp"
+        android:background="#296bc2"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/goBackButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back to Marketplace"
+        android:layout_below="@id/postButton"
+        android:layout_marginTop="16dp"
+        android:background="#4CAF50"
+        android:textColor="#FFFFFF" />
+</RelativeLayout>
