@@ -10,6 +10,8 @@
 
 ![Version](https://img.shields.io/badge/version-0.1.0-80b918)
 ![KotlinVersion](https://img.shields.io/badge/kotlin-v1.9-0077b6)
+![KotlinVersion](https://img.shields.io/badge/compileSdk-34-f9844a)
+![KotlinVersion](https://img.shields.io/badge/targetSdk-33-a4133c)
 
 ## ![Purpose and Benefits](https://api.iconify.design/game-icons/profit.svg?height=28&color=%23ba3329) Purpose and Benefits
 - Access all necessary information and services in one place, eliminating the need to navigate multiple platforms.
